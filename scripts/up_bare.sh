@@ -3,6 +3,7 @@
 # Dùng khi Docker Desktop chưa có/chưa chạy, và là đường chấm điểm của --mock.
 set -euo pipefail
 cd "$(dirname "$0")/.."
+[ -f .venv/bin/activate ] && source .venv/bin/activate
 mkdir -p run reports
 : > run/region-a.pid; : > run/region-b.pid; : > run/edge.pid
 
